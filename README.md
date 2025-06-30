@@ -69,7 +69,7 @@ ai-interview-generator-and-mock-simulator/
 ├── images/                  # UI assets
 └── ...
 ```
-##📦 Setup Instructions
+## 📦 Setup Instructions
 
 ⚠️ Requires Python 3.11+ and pip
 
