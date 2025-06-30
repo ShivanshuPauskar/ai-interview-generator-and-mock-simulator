@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Interview Question Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <h1>AI Interview Question Generator</h1>
+    <p class="tagline">Powered by AI to crack your next interview</p>
+    <p class="intro">Enter your role and experience — and let our AI instantly generate tailored questions with answers to help you prepare confidently.</p>
+  </header>
+
+  <div class="container">
+    <div class="form-content">
+      <form id="job-form" class="compact-form">
+  <div class="form-row">
+    <!-- Job Title with floating label -->
+    <div class="input-box">
+  <input type="text" id="jobTitle" placeholder="Job Title" required />
+</div>
+
+    <!-- Experience Dropdown -->
+    <div class="input-box">
+      <select id="experience" required>
+        <option value="" disabled selected hidden>Select Experience</option>
+        <option value="Fresher">Fresher</option>
+        <option value="Mid-Level">Mid-Level</option>
+        <option value="Senior">Senior</option>
+      </select>
+    </div>
+
+    <!-- Question Type Dropdown -->
+    <div class="input-box">
+      <select id="questionType" required>
+        <option value="" disabled selected hidden>Select Question Type</option>
+        <option value="Technical Skills">Technical Skills</option>
+        <option value="Problem Solving">Problem Solving</option>
+        <option value="Teamwork & Collaboration">Teamwork & Collaboration</option>
+        <option value="All">All</option>
+      </select>
+    </div>
+
+    <!-- Generate Button Beside -->
+    <div class="input-box no-style">
+  <button type="submit" class="btn" id="btnText">
+    <span>Generate</span>
+  </button>
+</div>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader-wrapper">
+    <div class="btn-loader" id="button-loader"></div>
+  </div>
+
+  <!-- Resume Upload -->
+  <div class="form-group resume-upload">
+    <button type="button" id="resumeUploadBtn" class="custom-upload-btn">Upload Resume</button>
+    <input type="file" id="resume" accept=".pdf" style="display: none" />
+    <span id="fileNameDisplay" class="file-name-display">Upload a resume (PDF) for personalized questions</span>
+  </div>
+</form>
+
+
+      <div id="output">
+        <section id="technicalSection" class="category-section" style="display: none;">
+          <h3>Technical Skills</h3>
+          <ul id="technicalList" class="question-list"></ul>
+        </section>
+
+        <section id="problemSection" class="category-section" style="display: none;">
+          <h3>Problem-Solving Skills</h3>
+          <ul id="problemList" class="question-list"></ul>
+        </section>
+
+        <section id="teamworkSection" class="category-section" style="display: none;">
+          <h3>Teamwork & Collaboration</h3>
+          <ul id="teamworkList" class="question-list"></ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- How It Works -->
+  <section class="how-it-works" data-aos="fade-up">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step" data-aos="fade-up" data-aos-delay="100">
+  <div class="step-img-wrapper">
+    <img src="images/1.png" alt="Step 1">
+  </div>
+  <div class="step-number">1</div>
+  <p>Choose your role and experience level.</p>
+</div>
+
+    
+<div class="step" data-aos="fade-up" data-aos-delay="100">
+  <div class="step-img-wrapper">
+    <img src="images/2.png" alt="Step 1">
+  </div>
+  <div class="step-number">2</div>
+  <p>Select a question category or pick “All”.</p>
+</div>
+
+
+<div class="step" data-aos="fade-up" data-aos-delay="100">
+  <div class="step-img-wrapper">
+    <img src="images/3.png" alt="Step 1">
+  </div>
+  <div class="step-number">3</div>
+  <p>(Optional) Upload your resume for more personalized questions. </p>
+</div>
+
+
+<div class="step" data-aos="fade-up" data-aos-delay="100">
+  <div class="step-img-wrapper">
+    <img src="images/4.png" alt="Step 1">
+  </div>
+  <div class="step-number">4</div>
+  <p>AI generates tailored questions + sample answers instantly.</p>
+</div>
+
+    </div>
+  </section>
+
+<!-- Benefits -->
+<section class="benefits" data-aos="fade-up">
+  <h2>Why Use This?</h2>
+  <div class="benefit-cards">
+    <div class="card tilt-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="emoji">🕒</div>
+      <h3>Saves hours of preparation</h3>
+      <p>Skip the research — instantly get curated questions based on your role.</p>
+    </div>
+    <div class="card tilt-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="emoji">🤖</div>
+      <h3>Powered by GPT-4</h3>
+      <p>Get cutting-edge, intelligent question generation and explanations.</p>
+    </div>
+    <div class="card tilt-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="emoji">💼</div>
+      <h3>Soft + Technical Skills</h3>
+      <p>Practice real-world technical + behavioral questions that interviewers ask.</p>
+    </div>
+    <div class="card tilt-card" data-aos="zoom-in" data-aos-delay="400">
+      <div class="emoji">📄</div>
+      <h3>Resume-Based Questions</h3>
+      <p>Upload your resume and get personalized questions based on your profile.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- More AI Tools -->
+<section class="more-tools" data-aos="fade-up">
+  <h2>Explore More AI Hiring Tools</h2>
+  <p class="intro">Want to go beyond questions? Try our smart AI tools designed to prepare you better and faster.</p>
+
+  <div class="tool-card wide" data-aos="fade-up" onclick="location.href='mock-interview.html';">
+    <div class="tool-img">
+      <img src="images/Chat bot.png" alt="Mock Interview Tool" />
+    </div>
+    <div class="tool-content">
+      <h3>💬 Mock Interview Simulator</h3>
+      <p>Simulate real interviews and get instant AI feedback. Sharpen your responses and boost confidence.</p>
+      <button class="tool-btn">Try Now</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 AI Interview Generator. Made with 💙 for job seekers.</p>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+<script>
+  VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+    max: 10,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2
+  });
+</script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="script.js"></script>
+</body>
+</html>

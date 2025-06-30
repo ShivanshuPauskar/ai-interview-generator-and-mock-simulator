@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mock Interview Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <h1>Mock Interview Simulator</h1>
+    <p class="tagline">Practice like it's real. Perform like a pro.</p>
+    <p class="intro">Choose your role and simulate a full-length interview with real-time AI feedback.</p>
+  </header>
+
+  <!-- Form Section -->
+  <div class="container">
+    <form id="mock-form" class="compact-form">
+      <div class="form-row">
+        <div class="input-box">
+          <input type="text" id="mockJobTitle" placeholder="Job Title (e.g., Software Engineer)" required />
+        </div>
+        <div class="input-box">
+          <select id="mockExperience" required>
+            <option value="" disabled selected hidden>Select Experience</option>
+            <option value="Fresher">Fresher</option>
+            <option value="Mid-Level">Mid-Level</option>
+            <option value="Senior">Senior</option>
+          </select>
+        </div>
+        <div class="input-box no-style">
+          <input type="file" id="mockResume" class="styled-input" style="display: none;" required accept="application/pdf" />
+          <label for="mockResume" class="btn">Upload Resume</label>
+          <span class="file-name-display" id="resumeLabel">Resume is required to begin.</span>
+        </div>
+        <div class="input-box no-style">
+          <button type="submit" class="btn"><span>Start Mock Interview</span></button>
+        </div>
+        </div>
+        <div class="loader-wrapper">
+            <div class="btn-loader" id="button-loader" style="display: none;"></div>
+        </div>
+
+      
+    </form>
+  </div>
+
+  <!-- Interview Section -->
+  <div class="interview-container" style="display: none; margin-top: 30px;">
+    <div id="questionBox" class="question-box"></div>
+    <textarea id="userAnswer" placeholder="Type your answer..." rows="5"></textarea>
+    <button id="submitAnswerBtn" class="btn">Submit Answer</button>
+    <div id="feedbackBox" class="feedback-box"></div>
+    <div style="margin-top: 20px;">
+      <button id="nextQuestionBtn" class="btn" style="display: none;">Next</button>
+
+       <button id="finishInterviewBtn" class="btn" style="display: none;">Finish</button>
+
+
+    </div>
+    <div id="downloadButtons" style="display: none; margin-top: 20px;">
+      <button class="btn" onclick="downloadText()">📄 Download as Text</button>
+      <button class="btn" onclick="downloadPDF()">📁 Download as PDF</button>
+    </div>
+  </div>
+
+  <!-- How It Works -->
+  <section class="how-it-works" data-aos="fade-up">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-img-wrapper"><img src="images/Back to work-amico.png" alt="Step 1"></div>
+        <div class="step-number">1</div>
+        <p>Enter your job role and experience.</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-img-wrapper"><img src="images/4.png" alt="Step 2"></div>
+        <div class="step-number">2</div>
+        <p>AI asks questions in real-time.</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-img-wrapper"><img src="images/Feedback-bro.png" alt="Step 3"></div>
+        <div class="step-number">3</div>
+        <p>You answer, and receive instant AI feedback.</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="400">
+        <div class="step-img-wrapper"><img src="images/1.png" alt="Step 4"></div>
+        <div class="step-number">4</div>
+        <p>Review and refine your performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits" data-aos="fade-up">
+    <h2>Why Use This?</h2>
+    <div class="benefit-cards">
+      <div class="card tilt-card">
+        <div class="emoji">🎙️</div>
+        <h3>Real-Time Simulation</h3>
+        <p>Experience actual interview pacing and pressure.</p>
+      </div>
+      <div class="card tilt-card">
+        <div class="emoji">⚡</div>
+        <h3>Instant Feedback</h3>
+        <p>AI evaluates your responses and gives suggestions immediately.</p>
+      </div>
+      <div class="card tilt-card">
+        <div class="emoji">📈</div>
+        <h3>Track Progress</h3>
+        <p>See how your answers improve over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore More Tools -->
+  <section class="more-tools" data-aos="fade-up">
+    <h2>Explore More AI Hiring Tools</h2>
+    <p class="intro" style="margin-bottom: 24px;">
+      Want static questions? Try our generator that gives tailored Q&A instantly.
+    </p>
+    <div class="tool-card wide" onclick="location.href='index.html';">
+      <div class="tool-img">
+        <img src="images/illustration.jpg" alt="Interview Question Generator" />
+      </div>
+      <div class="tool-content">
+        <h3>🧠 AI Interview Question Generator</h3>
+        <p>Get a ready-made set of questions and sample answers based on your role and resume.</p>
+        <button class="tool-btn">Try Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Mock Interview Simulator. Powered by 💡 + 💙.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="mock-script.js"></script>
+</body>
+</html>
