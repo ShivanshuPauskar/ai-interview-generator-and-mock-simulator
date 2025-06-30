@@ -68,3 +68,34 @@ ai-interview-generator-and-mock-simulator/
 ├── style.css
 ├── images/                  # UI assets
 └── ...
+```
+##📦 Setup Instructions
+
+⚠️ Requires Python 3.11+ and pip
+
+**🔧 1. Clone the Repo**
+```bash
+git clone https://github.com/ShivanshuPauskar/ai-interview-generator-and-mock-simulator.git
+cd ai-interview-generator-and-mock-simulator
+```
+**🧪 2. Set Up Virtual Environment**
+
+```bash
+
+python -m venv venv
+venv\Scripts\activate    # On Windows
+```
+ OR
+```
+source venv/bin/activate # On Linux/Mac
+```
+**📦 3. Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+**🔑 4. Set Up Environment Variables**
+
+Rename .env.template to .env and add your Gemini API Key:
+
+GEMINI_API_KEY=your_actual_api_key
