@@ -20,7 +20,9 @@ This project helps job seekers instantly generate **tailored interview questions
 - Overview of the AI Interview Generator interface.
 
 ![Homepage 1](images/readme1.png)
+
 ![Homepage 2](images/readme2.png)
+
 ![Homepage 3](images/readme3.png)
 
 #### 🔹 AI Interview Question Generated
@@ -36,15 +38,19 @@ This project helps job seekers instantly generate **tailored interview questions
 - Layout and entry point to start the mock interview simulator.
 
 ![Simulator Homepage 1](images/readme5.png)
+
 ![Simulator Homepage 2](images/readme6.png)
+
 ![Simulator Homepage 3](images/readme7.png)
 
 #### 🔹 Mock Interview Simulator in Action (4 Screenshots)
 - Simulation flow, question and answer interaction, and user experience.
 
-![Mock Simulator 1](images/readme8.png)
+
 ![Mock Simulator 2](images/readme9.png)
+
 ![Mock Simulator 3](images/readme10.png)
+
 ![Mock Simulator 4](images/readme11.png)
 
 
