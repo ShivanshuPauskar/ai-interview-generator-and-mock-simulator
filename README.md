@@ -13,7 +13,7 @@ This project helps job seekers instantly generate **tailored interview questions
 ---
 
 ## 📸 Screenshots
-
+![Homepage](images/readme1.png)
 <!-- Screenshot 1: Homepage with generator form -->
 <!-- Screenshot 2: Mock Interview question-answer flow -->
 <!-- Screenshot 3: Feedback and download summary -->
