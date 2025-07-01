@@ -30,7 +30,6 @@ This project helps job seekers instantly generate **tailored interview questions
 
 ![AI Question Generated](images/readme4.png)
 
----
 
 ### 🎙️ Mock Interview Simulator
 
