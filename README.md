@@ -6,12 +6,6 @@ This project helps job seekers instantly generate **tailored interview questions
 
 ---
 
-## 🚀 Live Demo
-
-👉 [COMING SOON: Link to your deployed site]
-
----
-
 ## 📸 Screenshots
 
 ### 🧠 AI Interview Generator
